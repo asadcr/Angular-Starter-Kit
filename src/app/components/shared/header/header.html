@@ -1,0 +1,32 @@
+<div class="col-md-12">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" routerLink="/">Starter Kit</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Manage <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li [class.active]="router.isActive('/technology')"><a routerLink="/">Dashboard</a></li>
+                            <li [class.active]="router.isActive('/category')"><a routerLink="/category">Categories</a></li>
+                            <li [class.active]="router.isActive('/software')"><a routerLink="/users">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a><i class="fa fa-user" aria-hidden="true"></i> {{ isEmpty(currentUser) ? '' : currentUser.Name }} </a>
+                    </li>
+                    <li><a (click) = "clearStorage()" style="cursor:pointer;"><span class="glyphicon glyphicon-log-out"></span> Sign Out</a></li>
+                </ul>
+            </div>
+            <div *ngIf="isEmpty(currentUser)">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a routerLink="/login" style="cursor:pointer;"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

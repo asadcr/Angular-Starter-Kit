@@ -1,0 +1,16 @@
+<app-breadcrumb [title]="breadCrumbTitle" [screen]="screenName" [showAddButton]="true" [progressBarStatus]="inProgress">
+</app-breadcrumb>
+
+<p-dataTable [value]="users" [rows]=3 [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[7,14,21]"
+    selectionMode="single" (onRowSelect)="open($event.data.Id, screenName)">
+    <p-column field="Name" header="Name" [sortable]="true" [style]="{'width':'250px'}"></p-column>
+    <p-column field="Email" header="Email"></p-column>
+    <p-column styleClass="col-button" [style]="{'width':'100px'}">
+        <ng-template pTemplate="header">
+            Actions <span class="glyphicon glyphicon-flash"></span>
+        </ng-template>
+        <ng-template let-modelEntery="rowData" pTemplate="body">
+            <button type="button" pButton (click)="delete(modelEntery)" icon="fa-trash" class="ui-button-danger"></button>
+        </ng-template>
+    </p-column>
+</p-dataTable>

@@ -1,0 +1,9 @@
+<div class="title-bar">
+    <div class="screen-title">{{title}}</div>
+    <div style="line-height: 40px; float: right;">
+        <button style="margin: 0; padding: 0; border-right: 0; border-bottom: 0; border-top: 0; border-radius: 0 4px 4px 0; height: 38px;" type="button" pButton (click)="open(0, screen)" icon="fa-plus" iconPose="right" label="Add" class="ui-button-primary" [hidden]="!showAddButton"></button>
+    </div>
+    <div style="height: 10px">
+        <!-- <md-progress-bar mode="indeterminate" *ngIf="progressBarStatus"></md-progress-bar> -->
+    </div>
+</div>
