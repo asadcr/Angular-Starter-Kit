@@ -1,6 +1,5 @@
 import { Injectable, EventEmitter, Output } from '@angular/core';
 import { UserModel } from '../models/user-model';
-import { Observable } from 'rxjs/Rx';
 import { Http, Headers, RequestOptions } from '@angular/http';
 
 @Injectable()

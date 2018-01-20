@@ -1,11 +1,5 @@
 import { Injectable, Output, EventEmitter } from '@angular/core';
 import { CategoryModel } from '../models/category-model';
-import { Observable, Subject } from 'rxjs/Rx';
-import { Http, Headers } from '@angular/http';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import { SelectItem } from 'primeng/primeng';
-import { retry } from 'rxjs/operator/retry';
 
 @Injectable()
 export class CategoryService {
@@ -14,7 +8,7 @@ export class CategoryService {
 
     private categories : Array<CategoryModel> 
     
-    constructor(public http: Http) {
+    constructor() {
         this.categories = new Array<CategoryModel>();
 
         var model = new CategoryModel(1, "Some", "Some");
