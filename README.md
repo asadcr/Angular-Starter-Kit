@@ -1,4 +1,4 @@
-# ReactJS-Starter-Kit
+# AngularJS-Starter-Kit
 
 A boilerplate for building Angular 5.0 apps with Typescript and webpack.
 
