@@ -21,7 +21,12 @@ git clone --depth=1 https://github.com/asadcr/Angular-Starter-Kit my-project
 ```
 ## npm scripts
 
+* `npm install` - retrieves and installs all required packages
 * `npm start` - Builds and Runs the app in development mode at localhost:4200
+
+## Running the Application
+* Open Browser at localhost:4200
+* Enter username admin and Password admin to login
 
 ## Conventions
 
